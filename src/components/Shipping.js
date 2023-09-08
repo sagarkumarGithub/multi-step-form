@@ -6,7 +6,7 @@ const Shipping = () => {
 
     const content = (
         <>
-            <label htmlFor="sameAsBilling">
+            {/* <label htmlFor="sameAsBilling">
                 <input
                     type="checkbox"
                     id="sameAsBilling"
@@ -15,7 +15,7 @@ const Shipping = () => {
                     onChange={handleChange}
                 />
                 Same as Billing Address
-            </label>
+            </label> */}
 
             <div className="split-container">
                 <div className="flex-col">
@@ -24,7 +24,7 @@ const Shipping = () => {
                         type="text"
                         id="shipFirstName"
                         name="shipFirstName"
-                        placeholder="Jane"
+                        placeholder="Rahul"
                         pattern="([A-Z])[\w+.]{1,}"
                         value={data.shipFirstName}
                         onChange={handleChange}
@@ -37,7 +37,7 @@ const Shipping = () => {
                         type="text"
                         id="shipLastName"
                         name="shipLastName"
-                        placeholder="Doe"
+                        placeholder="Singh"
                         pattern="([A-Z])[\w+.]{1,}"
                         value={data.shipLastName}
                         onChange={handleChange}
@@ -51,7 +51,7 @@ const Shipping = () => {
                 type="text"
                 id="shipAddress1"
                 name="shipAddress1"
-                placeholder="555 Wallaby Way"
+                placeholder="Chandigarh"
                 pattern="[\w\d\s.#]{2,}"
                 value={data.shipAddress1}
                 onChange={handleChange}
@@ -74,8 +74,8 @@ const Shipping = () => {
             <input
                 type="text"
                 id="shipCity"
-                name="ship-city"
-                placeholder="New York"
+                name="shipCity"
+                placeholder="Ambala"
                 pattern="([A-Z])[\w\s.]{1,}"
                 value={data.shipCity}
                 onChange={handleChange}
@@ -104,7 +104,7 @@ const Shipping = () => {
                 <option value="HI">Hawaii</option>
                 <option value="ID">Idaho</option>
                 <option value="IL">Illinois</option>
-                <option value="IN">Indiana</option>
+                <option value="IN">India</option>
                 <option value="IA">Iowa</option>
                 <option value="KS">Kansas</option>
                 <option value="KY">Kentucky</option>
@@ -148,9 +148,9 @@ const Shipping = () => {
                 type="text"
                 id="shipZipCode"
                 name="shipZipCode"
-                placeholder="12345"
-                pattern="[0-9]{5}"
-                maxLength="5"
+                placeholder="123456"
+                pattern="[0-9]{6}"
+                maxLength="6"
                 value={data.shipZipCode}
                 onChange={handleChange}
                 disabled={data.sameAsBilling}

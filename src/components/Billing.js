@@ -13,7 +13,7 @@ const Billing = () => {
                         type="text"
                         id="billFirstName"
                         name="billFirstName"
-                        placeholder="Jane"
+                        placeholder="Sagar"
                         pattern="([A-Z])[\w+.]{1,}"
                         value={data.billFirstName}
                         onChange={handleChange}
@@ -25,7 +25,7 @@ const Billing = () => {
                         type="text"
                         id="billLastName"
                         name="billLastName"
-                        placeholder="Doe"
+                        placeholder="Kumar"
                         pattern="([A-Z])[\w+.]{1,}"
                         value={data.billLastName}
                         onChange={handleChange}
@@ -38,7 +38,7 @@ const Billing = () => {
                 type="text"
                 id="billAddress1"
                 name="billAddress1"
-                placeholder="555 Wallaby Way"
+                placeholder="Uttam Nagar"
                 pattern="[\w\d\s.#]{2,}"
                 value={data.billAddress1}
                 onChange={handleChange}
@@ -49,7 +49,7 @@ const Billing = () => {
                 type="text"
                 id="billAddress2"
                 name="billAddress2"
-                placeholder="Apt. 2"
+                placeholder="Janakpuri"
                 pattern="[\w\d\s.#]{2,}"
                 value={data.billAddress2}
                 onChange={handleChange}
@@ -60,10 +60,11 @@ const Billing = () => {
                 type="text"
                 id="billCity"
                 name="billCity"
-                placeholder="New York"
+                placeholder="New Delhi"
                 pattern="([A-Z])[\w\s.]{1,}"
                 value={data.billCity}
                 onChange={handleChange}
+                disabled={data.sameAsShipping}
             />
 
             <label htmlFor="billState">State</label>
@@ -87,7 +88,7 @@ const Billing = () => {
                 <option value="HI">Hawaii</option>
                 <option value="ID">Idaho</option>
                 <option value="IL">Illinois</option>
-                <option value="IN">Indiana</option>
+                <option value="IN">India</option>
                 <option value="IA">Iowa</option>
                 <option value="KS">Kansas</option>
                 <option value="KY">Kentucky</option>
@@ -131,9 +132,9 @@ const Billing = () => {
                 type="text"
                 id="billZipCode"
                 name="billZipCode"
-                placeholder="12345"
-                pattern="[0-9]{5}"
-                maxLength="5"
+                placeholder="123456"
+                pattern="[0-9]{6}"
+                maxLength="6"
                 value={data.billZipCode}
                 onChange={handleChange}
             />
